@@ -23,7 +23,7 @@ export const useCurrencySwapForm = ({ currencyDataById }: UseCurrencySwapForm) =
             const fromCurrencyData = currencyDataById[fromCurrency];
             const toCurrencyData = currencyDataById[toCurrency];
 
-            const ratio = fromCurrencyData.price / toCurrencyData.price;
+            const ratio = toCurrencyData.price / fromCurrencyData.price;
             const toAmount = fromAmount * ratio;
 
             formik.setFieldValue('toAmount', toAmount);
