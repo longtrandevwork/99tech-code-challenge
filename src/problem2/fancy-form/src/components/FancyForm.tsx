@@ -52,6 +52,8 @@ const FancyForm = () => {
         }
 
         formik.submitForm()
+
+        formik.setSubmitting(false)
     }
 
     if (loading) {
